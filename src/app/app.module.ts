@@ -1,18 +1,43 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CarouselComponent} from "./components/carousel/carousel.component";
+import {NavbarComponent} from "./components/navbar/navbar.component";
+import {ApplicationComponent} from "./components/application/application.component";
+import {FooterComponent} from "./components/footer/footer.component";
+import {SearchComponent} from "./components/search/search.component";
+import {StarsComponent} from "./components/stars/stars.component";
+import {ProductItemComponent} from "./components/product-item/product-item.component";
+import {ProductDetailComponent} from './components/product-detail/product-detail.component';
+import {HomeComponent} from './components/home/home.component';
+
+const components = [
+    AppComponent,
+    CarouselComponent,
+    NavbarComponent,
+    ApplicationComponent,
+    FooterComponent,
+    SearchComponent,
+    StarsComponent,
+    ProductItemComponent,
+    ProductDetailComponent,
+    HomeComponent,
+]
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        ...components,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
