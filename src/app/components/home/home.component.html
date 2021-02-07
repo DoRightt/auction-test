@@ -5,7 +5,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-lg-4 col-sm-4" *ngFor="let product of products">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Filter products by title" [formControl]="titleFilter">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-4" *ngFor="let product of products | filter: 'title':filterCriteria">
             <auction-product-item [product]="product"></auction-product-item>
         </div>
     </div>

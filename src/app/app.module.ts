@@ -13,6 +13,8 @@ import {StarsComponent} from "./components/stars/stars.component";
 import {ProductItemComponent} from "./components/product-item/product-item.component";
 import {ProductDetailComponent} from './components/product-detail/product-detail.component';
 import {HomeComponent} from './components/home/home.component';
+import {FilterPipe} from './pipes/filter.pipe';
+import {ReactiveFormsModule} from "@angular/forms";
 
 const components = [
     AppComponent,
@@ -27,14 +29,17 @@ const components = [
     HomeComponent,
 ]
 
+
 @NgModule({
     declarations: [
         ...components,
+        FilterPipe,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
